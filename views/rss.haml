@@ -1,12 +1,12 @@
 !!! XML
 %rss{:version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom"}
 	%channel
-		%title your site's title
-		%link your site's URL
-		%description your site's description
-		%atom:link{ :href => "URL", :rel => "self", :type => "application/rss+xml" }
+		%title= @info['site_title']
+		%link= @info['site_url']
+		%description= @info['site_description']
+		%atom:link{ :href => "#{@info['site_url']}", :rel => "self", :type => "application/rss+xml" }
 			- @articles.each do |article|
 				%item
 					%title= article[:title]
-					%link http://#{request.host}:#{request.port}/#{article[:slug]}
+					%link #{@info['site_url']}/post/#{article[:slug]}
 					%description= article[:content]

@@ -13,6 +13,13 @@ set :public_folder, settings.root + '/assets'
 set :views, settings.root + '/views'
 
 helpers do
+	# Get Site information
+	def get_info
+		@info = File.open("setup.yaml") { |f| YAML.load(f) }
+		@info
+	end
+
+	# Get All The Articles
 	def get_articles
 		# Setup a blank array
 		@articles = []
@@ -72,6 +79,6 @@ end
 # RSS Route
 get '/rss' do
     content_type 'application/rss+xml'
-    get_articles
+    get_articles; get_info
     haml :rss, :format => :xhtml, :escape_html => true, :layout => false
 end
