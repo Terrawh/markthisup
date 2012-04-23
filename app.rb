@@ -57,4 +57,6 @@ get '/:slug' do
 		tags: meta['tags'],
 		content: markdown
 	}
+
+	haml :article
 end

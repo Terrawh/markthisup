@@ -9,8 +9,5 @@ gem 'sinatra-contrib'
 gem 'haml'
 gem 'rdiscount'
 
-# Testing
-gem 'rspec'
-
 # Rack
 gem 'thin'
