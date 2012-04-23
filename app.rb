@@ -56,11 +56,13 @@ end
 
 # Individual Article
 get '/post/:slug' do
+	file = File.read("articles/#{params[:slug]}/index.md").split("---\n")
+
 	# Load the articles meta
-	meta = File.open("articles/#{params[:slug]}/meta.yaml") { |f| YAML.load(f) }
+	meta = YAML.load(file[1])
 
 	# Load the articles content
-	markdown = File.read("articles/#{params[:slug]}/index.md")
+	markdown = file[2]
 
 	# Create the article object
 	@article = {

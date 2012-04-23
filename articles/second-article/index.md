@@ -1,3 +1,10 @@
+---
+title  : Testing
+date   : 23-04-2012
+tags   : [test, something]
+---
+
+
 It's recently dawned on me that I lack any ability to write something that would interest anyone. Simply put, I can't write well. I know my spelling is terrible and my grammar is worse. But surely those can be overcome using the delightful tools built into any word processor available today. The bigger question is how can I learn to communicate in a way that captivates the reader for longer than one of my usual 140 character tweets? The answer is practice.
 
 Over the duration of the first year of my degree, I officially submitted a grand total of 2000 words and only 1000 of that in a roughly academic format. That is all that was required. Crazy right? Just to clear things up, I'm currently studying BA Graphic Design at Central St Martins in London, England. At the time having so little academic based assignments seemed like a blessing, in hindsight it feels more like a disadvantage. *I want to be able to write well.*
