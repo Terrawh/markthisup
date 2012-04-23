@@ -58,5 +58,6 @@ get '/:slug' do
 		content: markdown
 	}
 
+	# Render HAML Template
 	haml :article
 end
