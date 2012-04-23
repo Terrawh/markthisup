@@ -16,7 +16,6 @@ helpers do
 	# Get Site information
 	def get_info
 		@info = File.open("setup.yaml") { |f| YAML.load(f) }
-		@info
 	end
 
 	# Get All The Articles
