@@ -1,2 +1,8 @@
-<h1>The Blog</h1>
-= yield
+!!! 5
+%html
+	%head
+		%title Site Name
+	%body
+		= partial :'partials/_header'
+		= yield
+		= partial :'partials/_footer'
