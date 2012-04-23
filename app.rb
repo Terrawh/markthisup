@@ -12,39 +12,44 @@ require 'rdiscount'
 set :public_folder, settings.root + '/assets'
 set :views, settings.root + '/views'
 
-# Index Page
-get '/' do
-	# Setup a blank array
-	@articles = []
+helpers do
+	def get_articles
+		# Setup a blank array
+		@articles = []
 
-	# Read all files in articles directory
-	Dir.glob("articles/*") do |folder|
-		# Open and read our YAML file
-		meta = File.open("#{folder}/meta.yaml") { |f| YAML.load(f) }
+		# Read all files in articles directory
+		Dir.glob("articles/*") do |folder|
+			# Open and read our YAML file
+			meta = File.open("#{folder}/meta.yaml") { |f| YAML.load(f) }
 
-		# Read our markdown content
-		markdown = File.read("#{folder}/index.md")
+			# Read our markdown content
+			markdown = File.read("#{folder}/index.md")
 
-		# Setup the article object
-		article = {
-			title: meta['title'],
-			slug: folder.split('/')[1],
-			date: meta['date'],
-			tags: meta['tags'],
-			content: markdown
-		}
+			# Setup the article object
+			article = {
+				title: meta['title'],
+				slug: folder.split('/')[1],
+				date: meta['date'],
+				tags: meta['tags'],
+				content: markdown
+			}
 
-		# Push the article to @articles array
-		@articles << article
+			# Push the article to @articles array
+			@articles << article
+		end
 	end
+end
 
+# Index Page
+get '/?' do
+	get_articles
 	# Render HAML Template
-	haml :index
+	haml :articles_index
 end
 
 
 # Individual Article
-get '/:slug' do
+get '/post/:slug' do
 	# Load the articles meta
 	meta = File.open("articles/#{params[:slug]}/meta.yaml") { |f| YAML.load(f) }
 
@@ -61,5 +66,12 @@ get '/:slug' do
 	}
 
 	# Render HAML Template
-	haml :article
+	haml :single_article
+end
+
+# RSS Route
+get '/rss' do
+    content_type 'application/rss+xml'
+    get_articles
+    haml :rss, :format => :xhtml, :escape_html => true, :layout => false
 end
