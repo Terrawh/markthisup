@@ -2,7 +2,7 @@
 # Site setup. This is just to make life simpler than editting templates
 # Although you will probably edit them anyway. :)
 
-site_title        : I Love Monsters
+site_title        : Thomas Bates
 site_url          : http://ilovemonsters.co.uk # including http://
 site_description  : This is the description about your site. It's awesome right?
 site_keywords     : [something, something else, blog, yeah, like, tags]

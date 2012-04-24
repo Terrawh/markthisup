@@ -354,3 +354,74 @@ a {
 #reset .reset-html5 section {
   display: block;
 }
+body {
+  background: #FFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+#container {
+  margin: 50px auto;
+  width: 960px;
+}
+header {
+  border-bottom: 1px solid #EEE;
+  margin: 0 10px;
+  padding-bottom: 20px;
+  width: 940px;
+  zoom: 1;
+}
+header:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: "";
+}
+header h1 {
+  float: left;
+  margin-right: 20px;
+  font-weight: bold;
+}
+header nav {
+  float: left;
+}
+header nav ul {
+  margin-top: 1px;
+}
+header nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+section#content {
+  border-bottom: 1px solid #EEE;
+  margin: 0 10px;
+  padding: 20px 0;
+}
+footer#footer {
+  margin: 0 10px;
+  padding: 20px 0 0;
+}
+footer#footer a {
+  color: #999;
+  border-bottom: 1px solid #EEE;
+}
+footer#footer a:hover {
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+footer#footer ul li {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+footer#footer ul li.mark {
+  float: right;
+  margin-right: 0;
+}
+footer#footer ul li.copyright {
+  color: #CCC;
+}
