@@ -6,7 +6,8 @@
 		%meta{ :name => "description", :content => get_info['site_description'] }
 		%meta{ :name => "author", :content => get_info['author'] }
 	%body
-		= partial :'partials/_header'
-		%section#content
-			= yield
-		= partial :'partials/_footer'
+		#container
+			= partial :'partials/_header'
+			%section#content
+				= yield
+			= partial :'partials/_footer'

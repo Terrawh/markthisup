@@ -1,3 +1,15 @@
 %header#header
 	%h1
 		%a{ :href => "/" }= get_info['site_title']
+	%nav
+		%ul
+			%li
+				%a{ :href => "/" } Index
+			%li
+				%a{ :href => "/pages/about" } About
+			- if get_info['twitter']
+				%li
+					%a{ :href => "http://twitter.com/#{get_info['twitter']}" } @#{get_info['twitter']}
+			- if get_info['github']
+				%li
+					%a{ :href => "http://github.com/#{get_info['github']}" } Github
