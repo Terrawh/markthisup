@@ -25,11 +25,13 @@ helpers do
 
 		# Read all files in articles directory
 		Dir.glob("articles/*") do |folder|
-			# Open and read our YAML file
-			meta = File.open("#{folder}/meta.yaml") { |f| YAML.load(f) }
+			file = File.read("#{folder}/index.md").split("---\n")
 
-			# Read our markdown content
-			markdown = File.read("#{folder}/index.md")
+			# Load the articles meta
+			meta = YAML.load(file[1])
+
+			# Load the articles content
+			markdown = file[2]
 
 			# Setup the article object
 			article = {
