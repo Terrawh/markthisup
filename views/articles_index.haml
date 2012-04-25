@@ -1,5 +1,6 @@
 %ul#articles_index
 	- @articles.each do |article|
 		%li
-			%a{ :href => "/post/#{article[:slug]}" }
-				#{article[:title]}
+			%a{ :href => "/article/#{article[:slug]}" }
+				%span.title= article[:title]
+				%span.date= article[:date]

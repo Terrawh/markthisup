@@ -1,7 +1,7 @@
 ---
 title  : Testing
-date   : 23-04-2012
-tags   : [test, something]
+date   : 23/04/2012
+tags   : [testing, bangers]
 ---
 
 
@@ -24,7 +24,3 @@ The second post that has driven me to attempt writing more is [I want to write m
 Let's be honest. You've probably drifted off and/or given up the will to live by now. Last thing now, I promise.
 
 Why a blog? Why not just write. Simple really, if I'm crap people can tell me and it gives me more motivation if I put something out there. Having a text document lying around on my desktop isn't really going to help too much, what's the point of writing if no-ones going to read it? The name  [Themboldtypes](http://themboldtypes.com) comes purely from a domain that I wasn't using, so made sense to do something with it. The blog is a simple [Symphony](http://symphony-cms.com) build and if you would like a copy to run for yourself just ask.
-
-**End**
-
-*If you'd like to make a comment about this post, ask a question or just say hello feel free to do so via [Twitter](http://twitter.com/yoamomonstruos).*

@@ -73,14 +73,18 @@ configure do
 			title: meta['title'],
 			slug: folder.split('/')[1],
 			date: meta['date'],
-			tags: meta['tags']
+			tags: meta['tags'],
+			content: markdown
 		}
-
 
 		# Push the article to @articles array
 		SETUP[:articles] << article
 	end
 end
+
+#  ====================================
+#  = TEMPLATE HELPERS                 =
+#  ====================================
 
 helpers do
 	# Get Site title
@@ -110,38 +114,40 @@ helpers do
 
 	# Get Articles
 	def get_articles
-		@articles = SETUP[:articles]
+		SETUP[:articles]
+	end
+
+	# Get single Article
+	def get_article(slug)
+		# Loop through each article
+		get_articles.each do |article|
+			# Article.slug == the params[:slug]
+			# return that article and exit the each.
+			if article[:slug] == params[:slug]
+				@article = article
+				return true
+			end
+		end
 	end
 end
+
+#  ===================================
+#  = ROUTES                          =
+#  ===================================
 
 # Index Page
 get '/?' do
 	# Grab all the articles
-	get_articles
+	@articles = get_articles
 
 	# Render HAML Template
 	haml :articles_index
 end
 
-
 # Individual Article
-get '/post/:slug' do
-	file = File.read("articles/#{params[:slug]}/index.md").split("---\n")
-
-	# Load the articles meta
-	meta = YAML.load(file[1])
-
-	# Load the articles content
-	markdown = file[2]
-
-	# Create the article object
-	@article = {
-		title: meta['title'],
-		slug: params[:slug],
-		date: meta['date'],
-		tags: meta['tags'],
-		content: markdown
-	}
+get '/article/:slug' do
+	# Grab an article
+	get_article(params[:slug])
 
 	# Render HAML Template
 	haml :single_article
