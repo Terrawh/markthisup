@@ -1,10 +1,10 @@
 !!! 5
 %html
 	%head
-		%title= get_info['site_title']
+		%title= site_title
 		%link{ :rel => "stylesheet", :type => "text/css", :href => "/css/style.css" }
-		%meta{ :name => "description", :content => get_info['site_description'] }
-		%meta{ :name => "author", :content => get_info['author'] }
+		%meta{ :name => "description", :content => site_description }
+		%meta{ :name => "author", :content => author_name }
 	%body
 		#container
 			= partial :'partials/_header'
