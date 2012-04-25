@@ -5,6 +5,7 @@ require 'sinatra/reloader'
 
 # Templating
 require 'haml'
+require 'json'
 require 'yaml'
 require 'rdiscount'
 
@@ -72,9 +73,9 @@ configure do
 			title: meta['title'],
 			slug: folder.split('/')[1],
 			date: meta['date'],
-			tags: meta['tags'],
-			content: markdown
+			tags: meta['tags']
 		}
+
 
 		# Push the article to @articles array
 		SETUP[:articles] << article
@@ -107,6 +108,7 @@ helpers do
 		SETUP[:author_info][:external_links]
 	end
 
+	# Get Articles
 	def get_articles
 		@articles = SETUP[:articles]
 	end
@@ -114,7 +116,9 @@ end
 
 # Index Page
 get '/?' do
+	# Grab all the articles
 	get_articles
+
 	# Render HAML Template
 	haml :articles_index
 end
@@ -150,7 +154,5 @@ end
 
 # RSS Route
 get '/rss' do
-    content_type 'application/rss+xml'
-    get_articles; get_info
-    haml :rss, :format => :xhtml, :escape_html => true, :layout => false
+    "RSS WILL GO HERE"
 end
