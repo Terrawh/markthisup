@@ -1,7 +1,6 @@
 ---
 title  : Testing
 date   : 23/04/2012
-tags   : [testing, bangers]
 ---
 
 

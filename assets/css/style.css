@@ -363,15 +363,21 @@ body {
   color: #333;
   -webkit-font-smoothing: antialiased;
 }
+a {
+  color: inherit;
+}
+a:hover {
+  color: #00ADEF;
+}
 #container {
   margin: 50px auto;
-  width: 700px;
+  width: 600px;
 }
 header#header {
   border-bottom: 1px solid #EEE;
   margin: 0 10px;
   padding-bottom: 20px;
-  width: 680px;
+  width: 580px;
   zoom: 1;
 }
 header#header:after {
@@ -399,7 +405,9 @@ header#header nav ul li {
 section#content {
   border-bottom: 1px solid #EEE;
   margin: 0 10px;
-  padding: 20px 0;
+}
+ul#articles_index {
+  padding-top: 20px;
 }
 ul#articles_index li {
   color: #CCC;
@@ -422,8 +430,89 @@ ul#articles_index li .date {
 }
 ul#articles_index li:last-child {
   border-bottom: none;
-  padding-bottom: 0;
   margin-bottom: 0;
+}
+article header {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 40px;
+  height: 80px;
+}
+article header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 80px;
+}
+article footer {
+  border-top: 1px solid #EEE;
+  margin-top: 40px;
+}
+article footer ul {
+  width: 100%;
+  zoom: 1;
+}
+article footer ul:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: "";
+}
+article footer ul li {
+  display: block;
+  float: left;
+  margin-right: 16px;
+  padding: 15px 0;
+}
+article footer ul li.date {
+  border-right: 1px solid #EEE;
+  font-weight: bold;
+  padding-right: 20px;
+}
+article footer ul li.permalink {
+  background: url(../images/link.png) center left no-repeat;
+  padding-left: 24px;
+}
+article a {
+  border-bottom: 1px solid #CCC;
+}
+article a:hover {
+  color: #00ADEF;
+  border-bottom: 1px solid #00ADEF;
+}
+article strong {
+  font-weight: bold;
+}
+article em {
+  color: #555;
+  font-family: Georgia;
+  font-style: italic;
+}
+article p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+article p + p {
+  margin-top: 20px;
+}
+article blockquote {
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 3px solid #CCC;
+  font-family: "Georgia", Times New Roman, Times, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  font-style: italic;
+  color: #555;
+}
+article blockquote a {
+  color: #00ADEF;
+  border-bottom: none;
+  font-weight: normal;
+}
+article blockquote a:hover {
+  color: #006389;
 }
 footer#footer {
   margin: 0 10px;
