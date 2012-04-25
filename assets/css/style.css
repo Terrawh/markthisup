@@ -414,9 +414,9 @@ ul#articles_index li {
   border-bottom: 1px solid #EEE;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 32px;
+  line-height: 24px;
 }
 ul#articles_index li a {
   color: #333;
@@ -426,11 +426,14 @@ ul#articles_index li a:hover {
 }
 ul#articles_index li .date {
   float: right;
-  color: #DDD;
+  color: #CCC;
 }
 ul#articles_index li:last-child {
   border-bottom: none;
   margin-bottom: 0;
+}
+article.page {
+  margin-bottom: 40px;
 }
 article header {
   border-bottom: 1px solid #EEE;
@@ -447,6 +450,7 @@ article footer {
   margin-top: 40px;
 }
 article footer ul {
+  margin: 0;
   width: 100%;
   zoom: 1;
 }
@@ -461,12 +465,17 @@ article footer ul li {
   display: block;
   float: left;
   margin-right: 16px;
+  margin-bottom: 0;
   padding: 15px 0;
 }
 article footer ul li.date {
   border-right: 1px solid #EEE;
-  font-weight: bold;
   padding-right: 20px;
+  color: #999;
+}
+article footer ul li.date span {
+  color: #555;
+  font-weight: bold;
 }
 article footer ul li.permalink {
   background: url(../images/link.png) center left no-repeat;
@@ -487,6 +496,12 @@ article em {
   font-family: Georgia;
   font-style: italic;
 }
+article h1 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
 article p {
   font-size: 14px;
   font-weight: normal;
@@ -494,6 +509,24 @@ article p {
 }
 article p + p {
   margin-top: 20px;
+}
+article ul,
+article ol {
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+article ul li,
+article ol li {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+article ul li {
+  list-style: disc;
+}
+article ol li {
+  list-style: decimal;
 }
 article blockquote {
   margin: 20px 0;
@@ -526,10 +559,14 @@ footer#footer a:hover {
   color: #333;
   border-bottom: 1px solid #333;
 }
+footer#footer ul {
+  margin-bottom: 0;
+}
 footer#footer ul li {
   display: block;
   float: left;
   margin-right: 20px;
+  margin-bottom: 0;
 }
 footer#footer ul li.mark {
   float: right;

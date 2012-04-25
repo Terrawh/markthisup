@@ -4,6 +4,8 @@
 	= RDiscount.new(@article[:content]).to_html
 	%footer.meta
 		%ul
-			%li.date Published on #{@article[:date]}
+			%li.date
+				Published on
+				%span= @article[:date]
 			%li.permalink
 				%a{ :href => "#{site_url}/article/#{@article[:slug]}" } Permalink
