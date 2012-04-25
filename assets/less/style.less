@@ -21,7 +21,7 @@ body {
 //  = Header Stuffs =
 //  =================
 
-header {
+header#header {
 	border-bottom: 1px solid #EEE;
 	margin: 0 10px;
 	padding-bottom: 20px;
@@ -54,6 +54,35 @@ section#content {
 	border-bottom: 1px solid #EEE;
 	margin: 0 10px;
 	padding: 20px 0;
+}
+
+ul#articles_index {
+	li {
+		color: #CCC;
+		display: inline;
+		margin-right: 5px;
+		#font .shorthand(bold, 24px, 32px);
+
+		a {
+			color: #333;
+			&:hover {
+				color: #00ADEF;
+			}
+		}
+
+		&:after,
+		&::after {
+			content: ',';
+			margin-left: -2px;
+		}
+
+		&:last-child {
+			&:after,
+			&::after {
+				content: none;
+			}
+		}
+	}
 }
 
 //  =================

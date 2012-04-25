@@ -367,32 +367,32 @@ body {
   margin: 50px auto;
   width: 700px;
 }
-header {
+header#header {
   border-bottom: 1px solid #EEE;
   margin: 0 10px;
   padding-bottom: 20px;
   width: 680px;
   zoom: 1;
 }
-header:after {
+header#header:after {
   display: block;
   visibility: hidden;
   height: 0;
   clear: both;
   content: "";
 }
-header h1 {
+header#header h1 {
   float: left;
   margin-right: 20px;
   font-weight: bold;
 }
-header nav {
+header#header nav {
   float: left;
 }
-header nav ul {
+header#header nav ul {
   margin-top: 1px;
 }
-header nav ul li {
+header#header nav ul li {
   display: inline;
   margin-left: 20px;
 }
@@ -400,6 +400,29 @@ section#content {
   border-bottom: 1px solid #EEE;
   margin: 0 10px;
   padding: 20px 0;
+}
+ul#articles_index li {
+  color: #CCC;
+  display: inline;
+  margin-right: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+}
+ul#articles_index li a {
+  color: #333;
+}
+ul#articles_index li a:hover {
+  color: #00ADEF;
+}
+ul#articles_index li:after,
+ul#articles_index li::after {
+  content: ',';
+  margin-left: -2px;
+}
+ul#articles_index li:last-child:after,
+ul#articles_index li:last-child::after {
+  content: none;
 }
 footer#footer {
   margin: 0 10px;

@@ -1,4 +1,5 @@
-%ul
+%ul#articles_index
 	- @articles.each do |article|
 		%li
-			%a{ :href => "/post/#{article[:slug]}" }= article[:title]
+			%a{ :href => "/post/#{article[:slug]}" }
+				#{article[:title]}
