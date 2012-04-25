@@ -1,6 +1,11 @@
 # Mark This Up
 
-*Mark This Up* is a simple git powered blogging platform. I say git powered, it's just a flatfile blogging platform written in Ruby, using Sinatra. It's aimed to be used with Heroku or another service like that. The code may be a bit shabby. Feel free to fork and contribute :)
+*Mark This Up* is a simple git powered blogging platform.
+I say git powered, it's just a flatfile blogging platform written in Ruby, using Sinatra. 
+It's aimed to be used with Heroku or another service like that.
+It takes your markdown files and it puts them on the web. All in simple blog format.
+It's completely styleable and comes with an info page that you can add to.
+The code may be a bit shabby but it works. Feel free to fork and contribute.
 
 ## Running the app
 
