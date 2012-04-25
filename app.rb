@@ -12,10 +12,41 @@ require 'rdiscount'
 set :public_folder, settings.root + '/assets'
 set :views, settings.root + '/views'
 
+# We want this to be super simple, even if it
+# could technically be done better.
+CONFIG = {
+
+	# All your general site information
+	:site_info => {
+		:title        => "I Love Monsters",
+		:url          => "http://blooming-leaf-7938.herokuapp.com",
+		:description  => "This is the description about your site. It's awesome right?",
+		:keywords     => ["something", "something else", "blog", "yeah", "like", "tags"]
+	}
+
+	# All your author information
+}
+
 helpers do
-	# Get Site information
-	def get_info
-		@info = File.open("setup.yaml") { |f| YAML.load(f) }
+
+	# Get Site title
+	def site_title
+		return CONFIG[:site_info][:title]
+	end
+
+	# Get Site URL
+	def site_url
+		return CONFIG[:site_info][:url]
+	end
+
+	# Get Site description
+	def site_description
+		return CONFIG[:site_info][:description]
+	end
+
+	# Get author info
+	def get_author
+
 	end
 
 	# Get All The Articles
