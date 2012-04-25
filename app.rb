@@ -79,6 +79,11 @@ get '/post/:slug' do
 	haml :single_article
 end
 
+# Static Information page
+get '/information/?' do
+	haml :information
+end
+
 # RSS Route
 get '/rss' do
     content_type 'application/rss+xml'
